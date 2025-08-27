@@ -1,0 +1,324 @@
+/* Glassmorphism effect */
+.glass {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] .glass {
+  background: rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 40%, #f093fb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 300% 300%;
+  animation: gradientShift 4s ease infinite;
+}
+
+/* Modern button styles */
+.btn-modern {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  transform: translateZ(0);
+  border: none;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.btn-modern:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.btn-modern::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.7s;
+}
+
+.btn-modern:hover::before {
+  left: 100%;
+}
+
+/* Card hover effects */
+.card-hover {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateZ(0);
+}
+
+.card-hover:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
+[data-theme="dark"] .card-hover:hover {
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+}
+
+/* Navbar styles */
+.navbar {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.8);
+}
+
+/* Footer styles */
+.footer {
+  background: rgba(255, 255, 255, 0.8);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* General spacing and alignment */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.card {
+  margin: 1rem 0;
+}
+
+.badge {
+  margin: 0.25rem;
+}
+
+/* Theme-aware button styles */
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  border-color: var(--primary-color);
+  color: var(--text-inverse);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, var(--primary-hover), var(--secondary-hover));
+  border-color: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+}
+
+.btn-outline {
+  border-color: var(--border-primary);
+  color: var(--text-primary);
+}
+
+.btn-outline:hover {
+  border-color: var(--primary-color);
+  background-color: var(--primary-color);
+  color: var(--text-inverse);
+}
+
+/* Theme-aware badge styles */
+.badge-primary {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: var(--text-inverse);
+  border-color: var(--primary-color);
+}
+
+/* Theme-aware text styles */
+.text-primary {
+  color: var(--primary-color) !important;
+}
+
+.text-secondary {
+  color: var(--secondary-color) !important;
+}
+
+.text-base-content {
+  color: var(--text-primary);
+}
+
+/* Theme-aware border styles */
+.border-primary {
+  border-color: var(--primary-color);
+}
+
+.border-primary\/10 {
+  border-color: rgba(var(--primary-color-rgb), 0.1);
+}
+
+.border-primary\/20 {
+  border-color: rgba(var(--primary-color-rgb), 0.2);
+}
+
+.border-primary\/30 {
+  border-color: rgba(var(--primary-color-rgb), 0.3);
+}
+
+/* Theme-aware background styles */
+.bg-primary {
+  background-color: var(--primary-color);
+}
+
+.bg-secondary {
+  background-color: var(--bg-secondary);
+}
+
+.bg-base-100 {
+  background-color: var(--bg-primary);
+}
+
+/* Theme-aware shadow styles */
+.shadow-lg {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] .shadow-lg {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+}
+
+/* Theme-aware ring styles */
+.ring-primary {
+  --tw-ring-color: var(--primary-color);
+}
+
+.ring-primary\/25 {
+  --tw-ring-color: rgba(var(--primary-color-rgb), 0.25);
+}
+
+.ring-primary\/30 {
+  --tw-ring-color: rgba(var(--primary-color-rgb), 0.3);
+}
+
+/* Floating label styles for login form */
+.form-control.relative {
+  position: relative;
+}
+
+.form-control .label.absolute {
+  pointer-events: none;
+  transition: all 0.2s ease-out;
+  transform-origin: left center;
+  z-index: 10;
+}
+
+.form-control input:focus ~ .label,
+.form-control input:not(:placeholder-shown) ~ .label {
+  transform: translateY(-1.5rem) scale(0.85);
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 0 0.5rem;
+  margin-left: -0.5rem;
+}
+
+/* Login form specific styles */
+.login-card {
+  backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  border-radius: 1.5rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  border: none;
+  color: var(--text-inverse);
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+}
+
+.input {
+  border: 1px solid var(--border-primary);
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 5px rgba(102, 126, 234, 0.5);
+}
+
+.login-card .card-body {
+  padding: 2.5rem;
+}
+
+.login-card h1 {
+  background: linear-gradient(135deg, #ffffff, #e2e8f0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+}
+
+.login-card .btn-primary {
+  background: linear-gradient(135deg, #0ea5e9, #d946ef);
+  border: none;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.login-card .btn-primary:hover {
+  background: linear-gradient(135deg, #0284c7, #c026d3);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(14, 165, 233, 0.4);
+}
+
+.login-card .btn-outline {
+  border-color: rgba(255, 255, 255, 0.3);
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.login-card .btn-outline:hover {
+  border-color: white;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.login-card .divider {
+  color: rgba(255, 255, 255, 0.7);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Password toggle button */
+.password-toggle {
+  background: none;
+  border: none;
+  padding: 0.5rem;
+
+  transition: all 0.2s ease;
+}
+
+.password-toggle:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Remove black border from input fields */
+.input {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.input:focus {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Custom input styles for login form */
