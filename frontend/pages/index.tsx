@@ -26,7 +26,7 @@ const Home: React.FC = () => {
                 name="Ridho Bagus"
                 title="My Card Portfolio"
                 bio="Dengan lebih dari 5 tahun pengalaman dalam pengembangan web, saya mengkhususkan diri dalam membuat situs web dan aplikasi modern dan responsif menggunakan React, Next.js, dan TypeScript."
-                imageUrl="https://github.com/DolphinDooos/portfoliossss/blob/main/frontend/profile.png"
+                imageUrl="https://musical-teal-hefiiw1u1q.edgeone.app/profile.png"
               />
             </div>
             
@@ -404,4 +404,5 @@ const Home: React.FC = () => {
 };
 
 export default Home;
+
 
