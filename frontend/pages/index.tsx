@@ -26,7 +26,7 @@ const Home: React.FC = () => {
                 name="Ridho Bagus"
                 title="My Card Portfolio"
                 bio="Dengan lebih dari 5 tahun pengalaman dalam pengembangan web, saya mengkhususkan diri dalam membuat situs web dan aplikasi modern dan responsif menggunakan React, Next.js, dan TypeScript."
-                imageUrl="https://cdn.discordapp.com/attachments/1130900772125687840/1405508993610285159/20250814_180813.png?ex=68aee7c1&is=68ad9641&hm=4529c3c5071086e2ed30b6e6db87a6cbb5cfd3f42fcb85777dcdb9cd83a29f88&"
+                imageUrl="https://github.com/DolphinDooos/portfoliossss/blob/main/frontend/profile.png"
               />
             </div>
             
@@ -404,3 +404,4 @@ const Home: React.FC = () => {
 };
 
 export default Home;
+
